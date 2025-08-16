@@ -1,0 +1,107 @@
+<div class="pdf-export-container">
+  <!-- Control Panel -->
+  <div class="control-panel">
+    <h2>Chart PDF Export Demo</h2>
+    <div class="button-group">
+      <button class="btn btn-success export-btn" (click)="exportToPDF()">
+        ดาวน์โหลด PDF (One Page)
+      </button>
+      <button class="btn btn-info" (click)="refreshCharts()">
+        Refresh Charts
+      </button>
+    </div>
+  </div>
+
+  <!-- Export Container - This will be captured for PDF -->
+  <div #exportContainer class="export-container">
+    <!-- Header Section -->
+    <div class="report-header">
+      <h1>รายงานสรุปผลการดำเนินงาน</h1>
+      <div class="report-info">
+        <p><strong>วันที่:</strong> {{ getCurrentDate() }}</p>
+        <p><strong>ประเภทรายงาน:</strong> รายงานยอดขายและรายได้</p>
+      </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="charts-section">
+      <div class="chart-container">
+        <h3>Chart 1 - ยอดขายรายเดือน</h3>
+        <canvas #lineChartCanvas></canvas>
+      </div>
+      
+      <div class="chart-container">
+        <h3>Chart 2 - รายได้รายไตรมาส</h3>
+        <canvas #barChartCanvas></canvas>
+      </div>
+      
+      <div class="chart-container">
+        <h3>Chart 3 - ผลิตภัณฑ์ขายดี</h3>
+        <canvas #chart3Canvas></canvas>
+      </div>
+      
+      <div class="chart-container">
+        <h3>Chart 4 - ลูกค้าตามภูมิภาค</h3>
+        <canvas #chart4Canvas></canvas>
+      </div>
+      
+      <div class="chart-container">
+        <h3>Chart 5 - การเติบโตรายปี</h3>
+        <canvas #chart5Canvas></canvas>
+      </div>
+      
+      <div class="chart-container">
+        <h3>Chart 6 - ช่องทางการขาย</h3>
+        <canvas #chart6Canvas></canvas>
+      </div>
+      
+      <div class="chart-container">
+        <h3>Chart 7 - ประสิทธิภาพทีม</h3>
+        <canvas #chart7Canvas></canvas>
+      </div>
+      
+      <div class="chart-container">
+        <h3>Chart 8 - ความพึงพอใจลูกค้า</h3>
+        <canvas #chart8Canvas></canvas>
+      </div>
+      
+      <div class="chart-container">
+        <h3>Chart 9 - การใช้งานระบบ</h3>
+        <canvas #chart9Canvas></canvas>
+      </div>
+      
+      <div class="chart-container">
+        <h3>Chart 10 - ROI ตามโครงการ</h3>
+        <canvas #chart10Canvas></canvas>
+      </div>
+    </div>
+
+    <!-- Summary Section -->
+    <div class="summary-section">
+      <h3>สรุปข้อมูลสำคัญ</h3>
+      <div class="summary-grid">
+        <div class="summary-card">
+          <h4>ยอดขายรวม</h4>
+          <p class="summary-value">123,000 บาท</p>
+        </div>
+        <div class="summary-card">
+          <h4>เติบโตเฉลี่ย</h4>
+          <p class="summary-value">+15.2%</p>
+        </div>
+        <div class="summary-card">
+          <h4>เดือนที่ดีที่สุด</h4>
+          <p class="summary-value">มิถุนายน</p>
+        </div>
+        <div class="summary-card">
+          <h4>แนวโน้ม</h4>
+          <p class="summary-value">เติบโตต่อเนื่อง</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="report-footer">
+      <p>รายงานนี้สร้างโดยระบบอัตโนมัติ Kiro | © 2025 Peera Saetae</p>
+    </div>
+  </div>
+</div>

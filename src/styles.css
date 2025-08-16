@@ -1,0 +1,44 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Print styles for better PDF output */
+@media print {
+  body {
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .control-panel {
+    display: none !important;
+  }
+  
+  .export-container {
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 15px !important;
+    border-radius: 0 !important;
+  }
+  
+  .chart-container {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
